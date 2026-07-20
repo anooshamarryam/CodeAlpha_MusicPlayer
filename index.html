@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sable — Music Player | CodeAlpha Task 4</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="player">
+  <div class="top-label"><span>Sable</span><span>CodeAlpha · Task 04</span></div>
+
+  <div class="art" id="art"><div class="disc"></div></div>
+
+  <div class="meta">
+    <div class="title" id="trackTitle"></div>
+    <div class="artist" id="trackArtist"></div>
+  </div>
+
+  <div class="progress-row">
+    <span id="curTime">0:00</span>
+    <input type="range" id="progress" value="0" min="0" max="100" step="0.1">
+    <span id="durTime">0:00</span>
+  </div>
+
+  <div class="controls">
+    <button class="ctrl-btn" id="prevBtn" title="Previous">
+      <svg viewBox="0 0 24 24"><path d="M6 6h2v12H6zm3.5 6 8.5 6V6z"/></svg>
+    </button>
+    <button class="ctrl-btn play-btn" id="playBtn" title="Play/Pause">
+      <svg id="playIcon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+    </button>
+    <button class="ctrl-btn" id="nextBtn" title="Next">
+      <svg viewBox="0 0 24 24"><path d="M16 6h2v12h-2zm-9.5 6L15 6v12z"/></svg>
+    </button>
+  </div>
+
+  <div class="lower-row">
+    <div class="vol-icon"><svg viewBox="0 0 24 24"><path d="M3 10v4h4l5 5V5L7 10H3zm13.5 2A4.5 4.5 0 0 0 14 7.97v8.05A4.5 4.5 0 0 0 16.5 12z"/></svg></div>
+    <input type="range" id="volume" min="0" max="1" step="0.01" value="0.7">
+  </div>
+
+  <div class="playlist" id="playlist"></div>
+</div>
+
+<audio id="audio"></audio>
+
+<script src="script.js"></script>
+</body>
+</html>
